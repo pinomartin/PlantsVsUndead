@@ -4,11 +4,11 @@ import SelectBox from "../components/SelectBox";
 
 const HomeScreen = () => {
   return (
-    <Container>
-      <Row className="background__image justify-content-center">
-        <Col md={6} className="text-center">
+    <Container className="background__image">
+      <Row className="justify-content-center">
+        <Col xs={9} md={6} className="text-center ">
           <HomeLogo />
-          <Row>
+          <Row className="justify-content-center">
             <Row className="justify-content-center">
               <Col md={8} className="mt-3 mb-3">
                 <SelectBox color="#FFF76C" title="SEASON" value="Season" buttonBackgroundColor="#FDC25B" arrowColor="#EB994D" />
