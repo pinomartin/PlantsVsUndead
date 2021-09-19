@@ -1,21 +1,39 @@
-import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs'
-
 interface SelectBoxProps {
-    color: string;
-    title: string;
-    value: string;
-    buttonBackgroundColor: string;
-    arrowColor: string;
-}
-const SelectBox = ({ color, title, value, buttonBackgroundColor, arrowColor }:SelectBoxProps) => {
-    
-    return (
-        <div className="selectBox__container" style={{backgroundColor: color}}>
-            <button className="selectBox__button selectBox__leftButton" style={{backgroundColor: buttonBackgroundColor}}><BsFillCaretLeftFill style={{color:arrowColor}}/></button>
-            <p className="selectBox__title">{title}</p>
-            <button className="selectBox__button selectBox__rightButton" style={{backgroundColor: buttonBackgroundColor}}><BsFillCaretRightFill style={{color:arrowColor}}/></button>
-        </div>
-    )
+  color: string;
+  title: string;
+  value: number | string;
+  buttonBackgroundColor: string;
+  arrowColor: string;
+  data?: Array<any>;
+  onChangeValue: (e: any) => void;
+  // onBackPress?: () => void;
+  // onForwardPress?: () => void;
+  // isDisabled?: boolean;
 }
 
-export default SelectBox
+const SelectBox = ({
+  color,
+  title,
+  value,
+  buttonBackgroundColor,
+  arrowColor,
+  data,
+  onChangeValue,
+}: SelectBoxProps) => {
+  console.log("data", data);
+  return (
+    <div className="selectBox__container" style={{ backgroundColor: color }}>
+      <select
+        name=""
+        id=""
+        className=""
+        onChange={(e) => onChangeValue(Number(e.target.value))}
+      >
+        {data &&
+          data.map((item: any) => <option value={item.id}>{item.name}</option>)}
+      </select>
+    </div>
+  );
+};
+
+export default SelectBox;

@@ -1,0 +1,292 @@
+{
+  "seasons": [
+    {
+      "id": 1,
+      "name": "spring",
+      "weather": [
+        {
+          "id": 1,
+          "name": "HURRICANES"
+        },
+        {
+          "id": 2,
+          "name": "VOLCANO"
+        },
+        {
+          "id": 3,
+          "name": "TSUNAMI"
+        },
+        {
+          "id": 4,
+          "name": "EARTHQUAKE"
+        },
+        {
+          "id": 5,
+          "name": "RAINY"
+        },
+        {
+          "id": 6,
+          "name": "SUNNY"
+        },
+        {
+          "id": 7,
+          "name": "CLOUDY"
+        },
+        {
+          "id": 8,
+          "name": "IRON RAIN"
+        },
+        {
+          "id": 9,
+          "name": "LOCUSTS SWARM"
+        },
+        {
+          "id": 10,
+          "name": "RATS SWARM"
+        },
+        {
+          "id": 11,
+          "name": "MALARIA"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "summer",
+      "weather": [
+        {
+          "id": 1,
+          "name": "HEAT WAVE",
+          "value": 0.1
+        },
+        {
+          "id": 2,
+          "name": "HURRICANES",
+          "value": 0.4
+        },
+        {
+          "id": 3,
+          "name": "THUNDERSTROM",
+          "value": 1.0
+        },
+        {
+          "id": 4,
+          "name": "VOLCANO",
+          "value": 0.0
+        },
+        {
+          "id": 5,
+          "name": "TSUNAMI",
+          "value": 0.2
+        },
+        {
+          "id": 6,
+          "name": "EARTHQUAKE",
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "name": "TORNADO",
+          "value": 0.5
+        },
+        {
+          "id": 8,
+          "name": "RAINY",
+          "value": 0.0
+        },
+        {
+          "id": 9,
+          "name": "SUNNY",
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "name": "CLOUDY",
+          "value": 0.0
+        },
+        {
+          "id": 11,
+          "name": "LOCUSTS SWARM",
+          "value": 0.0
+        },
+        {
+          "id": 12,
+          "name": "RATS SWARM",
+          "value": 0.0
+        },
+        {
+          "id": 13,
+          "name": "MALARIA",
+          "value": 0.0
+        },
+        {
+          "id": 14,
+          "name": "CORONAL MASS EJECTION",
+          "value": 0.0
+        },
+        {
+          "id": 15,
+          "name": "SOLAR FLARES",
+          "value": 0.0
+        },
+        {
+          "id": 16,
+          "name": "SOLAR MAXIMA",
+          "value": 0.0
+        },
+        {
+          "id": 17,
+          "name": "PROTON STORM",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "autumn",
+      "weather": [
+        {
+          "id": 1,
+          "name": "HURRICANES",
+          "value": 0.4
+        },
+        {
+          "id": 2,
+          "name": "THUNDERSTORM",
+          "value": 1.0
+        },
+        {
+          "id": 3,
+          "name": "VOLCANO",
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "name": "TSUNAMI",
+          "value": 0.2
+        },
+        {
+          "id": 5,
+          "name": "EARTHQUAKE",
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "name": "TORNADO",
+          "value": 0.5
+        },
+        {
+          "id": 7,
+          "name": "FLOOD",
+          "value": 0.0
+        },
+        {
+          "id": 8,
+          "name": "WINTER STROM",
+          "value": 0.0
+        },
+        {
+          "id": 9,
+          "name": "RAINY",
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "name": "SUNNY",
+          "value": 0.0
+        },
+        {
+          "id": 11,
+          "name": "CLOUDY",
+          "value": 0.0
+        },
+        {
+          "id": 12,
+          "name": "WINDY",
+          "value": 0.0
+        },
+        {
+          "id": 13,
+          "name": "IRON RAIN",
+          "value": 0.0
+        },
+        {
+          "id": 14,
+          "name": "MOONLIGHT",
+          "value": 4.0
+        },
+        {
+          "id": 15,
+          "name": "LOCUSTS SWARM",
+          "value": 0.0
+        },
+        {
+          "id": 16,
+          "name": "RATS SWARM",
+          "value": 0.0
+        },
+        {
+          "id": 17,
+          "name": "MALARIA",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "winter",
+      "weather": [
+        {
+          "id": 1,
+          "name": "VOLCANO",
+          "value": 0.1
+        },
+        {
+          "id": 2,
+          "name": "EARTHQUAKE",
+          "value": 0.4
+        },
+        {
+          "id": 3,
+          "name": "SNOWY",
+          "value": 1.0
+        },
+        {
+          "id": 4,
+          "name": "COLD WAVE",
+          "value": 0.0
+        },
+        {
+          "id": 5,
+          "name": "WINTER STROM",
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "name": "WINDY",
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "name": "CORONAL MASS EJECTION",
+          "value": 0.0
+        },
+        {
+          "id": 8,
+          "name": "SOLAR FLARES",
+          "value": 0.0
+        },
+        {
+          "id": 9,
+          "name": "SOLAR MAXIMA",
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "name": "MAGNETIC RECONNECTION",
+          "value": 0.0
+        }
+      ]
+    }
+  ]
+}
