@@ -137,7 +137,7 @@ const HomeScreen = () => {
                   placeholder="RISK FACTOR"
                   type="number"
                   min={0}
-                  max={100}
+                  max={50}
                   value={riskValue}
                   onChange={handleRiskInput}
                   step={5}

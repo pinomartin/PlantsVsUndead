@@ -26,7 +26,8 @@ const SelectBox = ({
       <select
         name=""
         id=""
-        className=""
+        className="selectBox__select"
+        style={{ backgroundColor: color }}
         onChange={(e) => onChangeValue(Number(e.target.value))}
       >
         {data &&
