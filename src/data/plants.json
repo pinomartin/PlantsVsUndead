@@ -10,26 +10,30 @@
         },
         {
             "id":3,
-            "name":"ice"
+            "name":"fire"
         },
         {
             "id":4,
-            "name":"light"
+            "name":"ice"
         },
         {
             "id":5,
-            "name":"parasite"
+            "name":"light"
         },
         {
             "id":6,
-            "name":"metal"
+            "name":"parasite"
         },
         {
             "id":7,
-            "name":"water"
+            "name":"metal"
         },
         {
             "id":8,
+            "name":"water"
+        },
+        {
+            "id":9,
             "name":"wind"
         }
 

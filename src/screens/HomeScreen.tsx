@@ -8,14 +8,15 @@ import { seasons } from "../data/seasons.json";
 
 const HomeScreen = () => {
   const { TYPE_PLANTS } = data;
-  console.log(TYPE_PLANTS);
+  console.log("types", TYPE_PLANTS);
 
   const [plant, setPlant] = useState(1);
   const [season, setSeason] = useState(1);
   const [yesterdayWheather, setYesterdayWheather] = useState(0);
   const [todayWheather, setTodayWheather] = useState(0);
-
   const [riskValue, setRiskValue] = useState(0);
+  const [isResultVisible, setisResultVisible] = useState(false);
+  const [useGreenhouse, setUseGreenhouse] = useState(false);
 
   const handleRiskInput = (e: any) => setRiskValue(Number(e.target.value));
 
@@ -23,13 +24,42 @@ const HomeScreen = () => {
   console.log("season", season);
   console.log(types);
   console.log(seasons);
-  console.log(yesterdayWheather,todayWheather);
+  console.log(yesterdayWheather, todayWheather);
 
-  const filterWheaterFromSeason = (id?:number) => {
-    const [wheaterFromSeason] = seasons.filter(item => item.id === id).map(item => item.weather);
+  const filterWheaterFromSeason = (id?: number) => {
+    const [wheaterFromSeason] = seasons
+      .filter((item) => item.id === id)
+      .map((item) => item.weather);
     return wheaterFromSeason;
-  }
+  };
   console.log(filterWheaterFromSeason(season));
+
+  const onClickCalculate = () => {
+    const plantData = TYPE_PLANTS.filter((item) => item.id === plant);
+    const [seasons] = plantData.map((item) => item.season);
+    const wheaterFromSeason = seasons.filter((item) => item.id === season);
+    const [wheathers] = wheaterFromSeason.map((item) => item.weather);
+    const filteredWheater = wheathers.filter(
+      (item) => item.id !== yesterdayWheather && item.id !== todayWheather
+    );
+    const valuesFromWheaters = filteredWheater.map((item) => item.value);
+    // const positives = valuesFromWheaters.filter((item) => item > 0);
+    const negatives = valuesFromWheaters.filter((item) => item < 0);
+    // const neutrals = valuesFromWheaters.filter((item) => item === 0);
+    // const percentageOfPositive = Number(
+    //   ((positives.length / valuesFromWheaters.length) * 100).toFixed(2)
+    // );
+    const percentageOfNegative = Number(
+      ((negatives.length / valuesFromWheaters.length) * 100).toFixed(2)
+    );
+    // const percentageOfNeutrals = Number(
+    //   ((neutrals.length / valuesFromWheaters.length) * 100).toFixed(2)
+    // );
+
+    const useGreenhouse = percentageOfNegative > riskValue ? true : false;
+    setisResultVisible(true);
+    setUseGreenhouse(useGreenhouse);
+  };
 
 
   // const filterTodayAndYesterdayWheather = () => {
@@ -104,7 +134,7 @@ const HomeScreen = () => {
             <Row className="justify-content-center">
               <Col md={8} className="mt-3 mb-3">
                 <input
-                placeholder="RISK FACTOR"
+                  placeholder="RISK FACTOR"
                   type="number"
                   min={0}
                   max={100}
@@ -124,9 +154,22 @@ const HomeScreen = () => {
             </Row>
             <Row className="justify-content-center mt-5">
               <Col md={8} className="mt-3 mb-3">
-                <button className="pushable">
-                  <span className="front">Calculate</span>
-                </button>
+               { isResultVisible ? 
+               <>
+               {
+                 useGreenhouse ? (<p>USE A GREENHOUSE</p>) : (<p>DO NOT USE A GREENHOUSE</p>)
+               }
+               <button className="pushable mb-3" onClick={()=> {}}>
+               <span className="front">DONATE</span>
+             </button>
+             <br />
+               <button className="pushable" onClick={()=> setisResultVisible(false)}>
+               <span className="front">BACK</span>
+             </button>
+               </> : ( <button className="pushable" onClick={onClickCalculate}>
+               <span className="front">Calculate</span>
+             </button>)}
+               
               </Col>
             </Row>
           </Row>
