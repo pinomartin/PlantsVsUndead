@@ -7,6 +7,8 @@ import { seasons } from "../data/seasons.json";
 import { risks } from "../data/risks.json";
 import Button from "../components/Button";
 import Result from "../components/Result";
+import GreenhouseMessage from "../components/GreenhouseMessage";
+
 
 const HomeScreen = () => {
   const {
@@ -129,14 +131,14 @@ const HomeScreen = () => {
                 {isResultVisible ? (
                   <>
                     {useGreenhouse ? (
-                      <p>USE A GREENHOUSE</p>
+                      <GreenhouseMessage message={"USE A GREENHOUSE"} isUse />
                     ) : (
-                      <p>DO NOT USE A GREENHOUSE</p>
+                      <GreenhouseMessage message={"DO NOT USE A GREENHOUSE"} />
                     )}
                     <Button
                       label={"DONATE"}
                       onClick={() => {}}
-                      cssAddOn={"mb-3"}
+                      cssAddOn={"mb-3 mt-4"}
                       // backColor={"#00A88A"}
                     />
                     <br />

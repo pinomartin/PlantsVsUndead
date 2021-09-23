@@ -9,7 +9,10 @@ body {
   background-color: #0f0f0f;
 }
 .background__image {
-  background-image: linear-gradient(rgba(26, 26, 26, 0.226), rgba(26, 26, 26, 0.349)),
+  background-image: linear-gradient(
+      rgba(26, 26, 26, 0.226),
+      rgba(26, 26, 26, 0.349)
+    ),
     url("./assets/fondo.png");
   background-position: top center;
   background-repeat: no-repeat;
@@ -48,6 +51,7 @@ body {
 .selectBox__select:enabled {
   outline: none !important;
   border: none !important;
+  background-color: none !important;
 }
 
 .risk__input {
@@ -67,6 +71,41 @@ body {
   text-align: center;
 }
 
+.greenhouseMessage__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 9px 9px -4px rgba(72, 69, 73, 0.71);
+  -moz-box-shadow: 0px 9px 9px -4px rgba(72, 69, 73, 0.71);
+  box-shadow: 0px 9px 9px -4px rgba(72, 69, 73, 0.71);
+  border: 2px solid rgba(72, 69, 73, 0.91);
+}
+
+.greenhouseMessage__message {
+  flex: 67%;
+  text-align: center;
+}
+.greenhouseMessage__message p {
+  margin: 0 !important;
+}
+
+.greenhouseMessage__img {
+  flex: 33%;
+  border-left: 2px solid rgba(72, 69, 73, 0.91);
+  padding: 0.7rem 0;
+  border-radius: 0 25px 25px 0 ;
+
+  /* background-color: #70EEE2; */
+}
+
+.greenhouseMessage__img img {
+  max-width: 50%;
+  height: auto;
+}
+
 .result__container {
   border: 2px solid rgba(72, 69, 73, 0.91);
   border-radius: 10px;
@@ -82,8 +121,6 @@ body {
   flex: 75%;
   border-right: 2px solid rgba(72, 69, 73, 0.91);
   border-radius: 9px 0 0 9px;
-
-  /* background-color: #000000; */
 }
 
 .result__percentage {
@@ -118,13 +155,12 @@ body {
   transform: translateY(-2px);
 }
 
-
-.plantsScreen__mainContainer{
+.plantsScreen__mainContainer {
   /* background-color: #fdc25b; */
   border-radius: 7px;
 }
 
-.plantContainer__row{
+.plantContainer__row {
   border-radius: 7px;
   border: 5px double #f8b239;
   margin-top: 0.8rem;
