@@ -6,10 +6,10 @@ interface PlantContainerProps {
 }
 const PlantContainer = ({ data }: PlantContainerProps) => {
   return (
-    <Container>
-      <Row className="justify-content-center">
+    <Container fluid>
+      <Row className="justify-content-center plantContainer__row">
         {data.map((plant) => (
-          <Col>
+          <Col xs={2}>
             <img src={plant.imgSrc} alt={plant.imgAlt} className="img-fluid" />
           </Col>
         ))}

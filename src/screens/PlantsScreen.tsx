@@ -16,10 +16,10 @@ import {
 const PlantsScreen = () => {
   return (
     <Container fluid className="background__image">
-      <Row className="justify-content-center">
-        <Col xs={12} sm={9} md={6} lg={6} xl={3} className="text-center ">
+      <Row className="justify-content-center align-items-center">
+        <Col xs={12} sm={9} md={6} lg={6} xl={3} className="text-center">
           <HomeLogo />
-          <Container fluid>
+          <Container fluid className={"plantsScreen__mainContainer"}>
             <PlantContainer data={darkPlants} />
             <PlantContainer data={electroPlants} />
             <PlantContainer data={firePlants} />

@@ -117,3 +117,16 @@ body {
 .pushable:active .front {
   transform: translateY(-2px);
 }
+
+
+.plantsScreen__mainContainer{
+  /* background-color: #fdc25b; */
+  border-radius: 7px;
+}
+
+.plantContainer__row{
+  border-radius: 7px;
+  border: 5px double #f8b239;
+  margin-top: 0.8rem;
+  padding: 0.5rem 0;
+}
