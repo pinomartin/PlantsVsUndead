@@ -132,21 +132,27 @@ const HomeScreen = () => {
               <Col md={8} className="mt-3 mb-3">
                 {isResultVisible ? (
                   <>
+                  <div className="animate__animated  animate__fadeIn">
                     {useGreenhouse ? (
                       <GreenhouseMessage message={"USE A GREENHOUSE"} isUse />
                     ) : (
                       <GreenhouseMessage message={"DO NOT USE A GREENHOUSE"} />
                     )}
+                  </div>
                     <Button
                       label={isClipboardVisible ? "CLOSE" : "DONATE"}
                       onClick={() => setIsClipboardVisible(!isClipboardVisible)}
                       cssAddOn={"mb-3 mt-4"}
-                      // backColor={"#00A88A"}
                     />
 
                     {isClipboardVisible ? (
                       <div className="animate__animated  animate__headShake">
-                        <ClipboardCopy copyText="0x3cf2D75984345566CAbDE293AF0fA3f7e7b8A86E" />
+                        <ClipboardCopy
+                          copyText="0x3cf2D75984345566CAbDE293AF0fA3f7e7b8A86E"
+                          message={
+                            "You can do a contribution as a form of gratitude it at the following address of the Binance Smart Chain \n (PVU, BNB, BUSD, ...)"
+                          }
+                        />
                       </div>
                     ) : null}
 

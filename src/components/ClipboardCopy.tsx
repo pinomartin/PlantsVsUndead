@@ -2,9 +2,10 @@ import { useState } from "react";
 
 interface ClipboardCopyProps {
     copyText: string;
+    message?: string;
 }
 
-const ClipboardCopy = ({ copyText }: ClipboardCopyProps) => {
+const ClipboardCopy = ({ copyText, message }: ClipboardCopyProps) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const copyTextToClipboard = async(text:string) => {
@@ -29,6 +30,7 @@ const ClipboardCopy = ({ copyText }: ClipboardCopyProps) => {
     
       return (
         <div className="clipboardCopy">
+            {message && (<><small style={{fontSize: '0.75em', fontFamily: 'monospace', whiteSpace: 'pre-line' }}>{message}</small> <br /></>)}
           {/* <input type="text" value={copyText} readOnly /> */}
           <code>{copyText}</code>
          
