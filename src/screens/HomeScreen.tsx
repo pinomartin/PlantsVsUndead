@@ -8,7 +8,8 @@ import { risks } from "../data/risks.json";
 import Button from "../components/Button";
 import Result from "../components/Result";
 import GreenhouseMessage from "../components/GreenhouseMessage";
-
+import ClipboardCopy from "../components/ClipboardCopy";
+import { useState } from "react";
 
 const HomeScreen = () => {
   const {
@@ -26,6 +27,7 @@ const HomeScreen = () => {
     getResults,
     percentages,
   } = useData();
+  const [isClipboardVisible, setIsClipboardVisible] = useState(false);
 
   return (
     <Container fluid className="background__image">
@@ -136,11 +138,18 @@ const HomeScreen = () => {
                       <GreenhouseMessage message={"DO NOT USE A GREENHOUSE"} />
                     )}
                     <Button
-                      label={"DONATE"}
-                      onClick={() => {}}
+                      label={isClipboardVisible ? "CLOSE" : "DONATE"}
+                      onClick={() => setIsClipboardVisible(!isClipboardVisible)}
                       cssAddOn={"mb-3 mt-4"}
                       // backColor={"#00A88A"}
                     />
+
+                    {isClipboardVisible ? (
+                      <div className="animate__animated  animate__headShake">
+                        <ClipboardCopy copyText="0x3cf2D75984345566CAbDE293AF0fA3f7e7b8A86E" />
+                      </div>
+                    ) : null}
+
                     <br />
                     <Button label={"BACK"} onClick={resetView} />
                   </>

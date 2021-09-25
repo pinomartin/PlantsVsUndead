@@ -96,7 +96,7 @@ body {
   flex: 33%;
   border-left: 2px solid rgba(72, 69, 73, 0.91);
   padding: 0.7rem 0;
-  border-radius: 0 25px 25px 0 ;
+  border-radius: 0 25px 25px 0;
 
   /* background-color: #70EEE2; */
 }
@@ -153,6 +153,36 @@ body {
 
 .pushable:active .front {
   transform: translateY(-2px);
+}
+
+.clipboardCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  -webkit-box-align: center;
+}
+
+.clipboardCopy code {
+  font-family: input-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: #f89f39;
+}
+
+.clipboardCopy button {
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  color: #01D6A3;
+  font-family: monospace;
+  font-weight: 600;
 }
 
 .plantsScreen__mainContainer {
