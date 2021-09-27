@@ -10,6 +10,7 @@ const useData = () => {
   const [todayWheather, setTodayWheather] = useState(0);
   const [riskValue, setRiskValue] = useState(0);
   const [isResultVisible, setisResultVisible] = useState(false);
+  const [isClipboardVisible, setIsClipboardVisible] = useState(false);
   const [useGreenhouse, setUseGreenhouse] = useState(false);
   const [percentages, setPercentages] = useState({
     positive: 0,
@@ -26,6 +27,7 @@ const useData = () => {
 
   const resetView = () => {
     setisResultVisible(false);
+    setIsClipboardVisible(false);
   };
 
   const getResults = () => {
@@ -71,6 +73,8 @@ const useData = () => {
     setRiskValue,
     percentages,
     useGreenhouse,
+    isClipboardVisible,
+    setIsClipboardVisible,
     isResultVisible,
     filterWheaterFromSeason,
     getResults,

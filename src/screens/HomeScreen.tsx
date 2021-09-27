@@ -9,7 +9,6 @@ import Button from "../components/Button";
 import Result from "../components/Result";
 import GreenhouseMessage from "../components/GreenhouseMessage";
 import ClipboardCopy from "../components/ClipboardCopy";
-import { useState } from "react";
 
 const HomeScreen = () => {
   const {
@@ -20,6 +19,8 @@ const HomeScreen = () => {
     setRiskValue,
     filterWheaterFromSeason,
     isResultVisible,
+    isClipboardVisible,
+    setIsClipboardVisible,
     setYesterdayWheather,
     setTodayWheather,
     resetView,
@@ -27,14 +28,13 @@ const HomeScreen = () => {
     getResults,
     percentages,
   } = useData();
-  const [isClipboardVisible, setIsClipboardVisible] = useState(false);
 
   return (
     <Container fluid className="background__image">
       <Row className="justify-content-center">
         <Col xs={12} sm={9} md={6} lg={6} xl={4} className="text-center ">
           <HomeLogo />
-          <Row className="justify-content-center">
+          <Row className="justify-content-center mt-3">
             <Row className="justify-content-center">
               <Col md={8} className="mt-3 mb-3">
                 {isResultVisible ? (
@@ -47,7 +47,7 @@ const HomeScreen = () => {
                 ) : (
                   <SelectBox
                     color="#FFF76C"
-                    title="Season"
+                    title="SEASON"
                     value={season}
                     data={seasons}
                     onChangeValue={setSeason}
@@ -115,7 +115,7 @@ const HomeScreen = () => {
               </Row>
             )}
             <Row className="justify-content-center">
-              <Col md={8} className="mt-3 mb-3">
+              <Col md={8} className="mt-3">
                 {!isResultVisible && (
                   <SelectBox
                     color="#e9576f"
@@ -128,7 +128,7 @@ const HomeScreen = () => {
                 )}
               </Col>
             </Row>
-            <Row className="justify-content-center mt-5">
+            <Row className="justify-content-center">
               <Col md={8} className="mt-3 mb-3">
                 {isResultVisible ? (
                   <>

@@ -18,6 +18,7 @@ const SelectBox = ({
   console.log("data", data);
   return (
     <div className="selectBox__container" style={{ backgroundColor: color }}>
+      <span>{title}</span>
       <select
         name=""
         id=""

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&display=swap');
 
 body {
   margin: 0;
@@ -30,6 +31,16 @@ body {
   -moz-box-shadow: 0px 9px 9px -4px rgba(72, 69, 73, 0.71);
   box-shadow: 0px 9px 9px -4px rgba(72, 69, 73, 0.71);
   outline: none;
+}
+
+.selectBox__container span {
+  position: absolute;
+  content: "";
+  top: -50%;
+  left: 0;
+  color: white;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
 }
 
 .selectBox__select {
@@ -166,6 +177,8 @@ body {
   border-radius: 10px;
   padding: 10px 10px;
   -webkit-box-align: center;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 .clipboardCopy code {
@@ -174,13 +187,19 @@ body {
   font-style: normal;
   font-size: 0.8rem;
   color: #f89f39;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  width: 75%;
 }
 
 .clipboardCopy button {
   background-color: transparent;
   border: none;
   border-radius: 10px;
-  color: #01D6A3;
+  color: #01d6a3;
   font-family: monospace;
   font-weight: 600;
 }
